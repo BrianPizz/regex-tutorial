@@ -1,10 +1,14 @@
-# Title (replace with your title)
+# Regex Tutorial: Matching a URL
 
-Introductory paragraph (replace this with your text)
+This tutorial will guide a user on how to use the following regular expression. 
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+The regular expression, or regex, to match a URL is as follows:
+```
+/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
+```
+This expressions checks to see if a string contains all the required characters of a valid URL. Each component will be broken down and explained.
 
 ## Table of Contents
 
@@ -20,6 +24,18 @@ Briefly summarize the regex you will be describing and what you will explain. In
 ## Regex Components
 
 ### Anchors
+
+Anchors do not match a character but match a position of a character. 
+
+```
+^
+```
+The caret matches the position before the first character in the string.
+
+```
+$
+```
+Similarly, the dollar sign matches the position after the last character in the string.
 
 ### Quantifiers
 
