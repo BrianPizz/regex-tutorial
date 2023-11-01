@@ -39,7 +39,51 @@ Similarly, the dollar sign matches the position after the last character in the 
 
 ### Quantifiers
 
+Quantifiers match instances of a character or group of characters.
+
+```
+*
+```
+The asterisk matches 0 or more instances of the preceding element.
+
+```
++
+```
+The plus sign matches 1 or more instances of the preceding element. 
+
+```
+?
+```
+The question mark matches 0 or 1 instances of the preceding element. 
+
+```
+{2,6}
+```
+This quantifier specifies that the preceding pattern should be matched a minimum of 2 times and a maximum of 6 times
+
 ### Grouping Constructs
+
+Grouping constructs are used to group characters together. They are grouped by using parentheses.
+
+```
+(https?:\/\/)?
+```
+This is an optional group matching the protocol of the url.
+
+```
+([\da-z\.-]+)
+```
+This group matches the URL subdomain and second-level domain.
+
+```
+([a-z\.]{2,6})
+```
+This group matches the top-level domain.
+
+```
+([\/\w \.-]*)*
+```
+this group matches any instances, if any, of a page path
 
 ### Bracket Expressions
 
